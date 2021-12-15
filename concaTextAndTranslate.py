@@ -46,5 +46,5 @@ for english_sentence, translate_sentence in zip(english_sentences, translate_sen
 
 result_text = result_text.strip()
 
-with open(output_text_filename, 'w', encoding='utf8') as output_file:
+with open(output_text_filename, 'w', encoding='cp1251') as output_file:
     output_file.write(result_text)
