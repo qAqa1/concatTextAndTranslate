@@ -19,7 +19,7 @@ def split_to_sentences(text):
 def read_sentences(path_to_text, text_name='Split text'):
     with open(path_to_text, 'r', encoding='utf8') as content_file:
         sentences = split_to_sentences(content_file.read())
-        sentences_num = 0
+        sentences_num = 1
         print(text_name + ':')
         for sentence in sentences:
             print(str(sentences_num) + ')', sentence)
@@ -46,5 +46,5 @@ for english_sentence, translate_sentence in zip(english_sentences, translate_sen
 
 result_text = result_text.strip()
 
-with open(output_text_filename, 'w') as output_file:
+with open(output_text_filename, 'w', encoding='utf8') as output_file:
     output_file.write(result_text)
