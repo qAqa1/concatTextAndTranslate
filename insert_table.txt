@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+  <table border="1" style="border: 1px solid black; border-collapse: collapse;">
+@
+  </table>
+   </tr>
+  </body>
+</html>
