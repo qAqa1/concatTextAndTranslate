@@ -1,4 +1,5 @@
 delimiters = '.!?'
+shield_char = '\\'
 
 english_text_filename = 'english.txt'
 translate_text_filename = 'translate.txt'
@@ -10,11 +11,13 @@ table_replace_char = '@'
 def split_to_sentences(text):
     sentences = []
     last_sentence = ''
+    prev_char = '\0'
     for ch in text:
         last_sentence += ch
-        if ch in delimiters:
+        if ch in delimiters and prev_char is not shield_char:
             sentences.append(last_sentence.strip())
             last_sentence = ''
+        prev_char = ch
     return sentences
 
 
