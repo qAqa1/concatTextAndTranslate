@@ -15,6 +15,8 @@ def split_to_sentences(text):
     for ch in text:
         last_sentence += ch
         if ch in delimiters and prev_char is not shield_char:
+            for delimiter in delimiters:
+            	last_sentence = last_sentence.replace('\\' + delimiter, delimiter)
             sentences.append(last_sentence.strip())
             last_sentence = ''
         prev_char = ch
